@@ -28,10 +28,10 @@ struct CommonsImage429ReproApp: App {
             let sessionConfig = URLSessionConfiguration.default
 
             sessionConfig.httpAdditionalHeaders = [
-                "User-Agent": "Commons/1 iOS 26.1.0"
+                "User-Agent": "CommonsImage429ReproApp/1 (https://github.com/nylki/CommonsImage429ReproApp) iOS 26.1.0"
             ]
             
-            /// for debugging purposes, a commons **firefox header** that **results in a succesful original image load**:
+            /// for debugging purposes, a common **firefox header** that **results in a succesful original image load**:
 //                sessionConfig.httpAdditionalHeaders = [
 //                    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0"
 //                ]
