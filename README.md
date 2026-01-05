@@ -1,2 +1,2 @@
  This is a sample iOS app to reproduce an image loading issue, resulting in 429 errors when requesting original (non-resized) images from wiki commons.
-For more info and discussion see: phabricator.wikimedia.org/T413570 
+For more info and discussion see: [phabricator.wikimedia.org/T413570 ](phabricator.wikimedia.org/T413570 )
