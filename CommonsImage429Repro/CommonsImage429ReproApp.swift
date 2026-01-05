@@ -27,8 +27,11 @@ struct CommonsImage429ReproApp: App {
         do {
             let sessionConfig = URLSessionConfiguration.default
 
+            let iOSVersionString = getIOSVersionString() // eg. "iOS 26.1.0"
+            let userAgent = "CommonsImage429ReproApp/1 (https://github.com/nylki/CommonsImage429ReproApp) \(iOSVersionString)"
+            
             sessionConfig.httpAdditionalHeaders = [
-                "User-Agent": "CommonsImage429ReproApp/1 (https://github.com/nylki/CommonsImage429ReproApp) iOS 26.1.0"
+                "User-Agent": userAgent
             ]
             
             /// for debugging purposes, a common **firefox header** that **results in a succesful original image load**:
@@ -101,4 +104,10 @@ struct CommonsImage429ReproApp: App {
             }
         }
     }
+}
+
+func getIOSVersionString() -> String {
+    let version = ProcessInfo.processInfo.operatingSystemVersion
+    let versionString = "\(version.majorVersion).\(version.minorVersion).\(version.patchVersion)"
+    return "iOS \(versionString)"
 }
